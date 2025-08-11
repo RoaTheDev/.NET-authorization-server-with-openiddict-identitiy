@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infrastructure/Authorization.Infrastructure.csproj",
-      "projectName": "Authorization.Infrastructure",
-      "projectPath": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infrastructure/Authorization.Infrastructure.csproj",
+      "projectUniqueName": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infra/Authorization.Infra.csproj",
+      "projectName": "Authorization.Infra",
+      "projectPath": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infra/Authorization.Infra.csproj",
       "packagesPath": "/home/roa/.nuget/packages/",
-      "outputPath": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infrastructure/obj/",
+      "outputPath": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infra/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/roa/.nuget/NuGet/NuGet.Config"

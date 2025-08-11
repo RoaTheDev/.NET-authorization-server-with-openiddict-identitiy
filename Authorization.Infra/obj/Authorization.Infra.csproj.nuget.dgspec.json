@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Domain/Authorization.Domain.csproj": {}
+    "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infra/Authorization.Infra.csproj": {}
   },
   "projects": {
-    "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Domain/Authorization.Domain.csproj": {
+    "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infra/Authorization.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Domain/Authorization.Domain.csproj",
-        "projectName": "Authorization.Domain",
-        "projectPath": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Domain/Authorization.Domain.csproj",
+        "projectUniqueName": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infra/Authorization.Infra.csproj",
+        "projectName": "Authorization.Infra",
+        "projectPath": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infra/Authorization.Infra.csproj",
         "packagesPath": "/home/roa/.nuget/packages/",
-        "outputPath": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Domain/obj/",
+        "outputPath": "/home/roa/Documents/Asp/AuthorizationServer/Authorization.Infra/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/roa/.nuget/NuGet/NuGet.Config"
@@ -44,12 +44,6 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "Microsoft.Extensions.Identity.Stores": {
-              "target": "Package",
-              "version": "[9.0.8, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
