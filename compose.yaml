@@ -1,0 +1,25 @@
+﻿services:
+  authorizationserver:
+    image: authorizationserver
+    build:
+      context: .
+      dockerfile: AuthorizationServer/Dockerfile
+
+  authorizationserver.domain:
+    image: authorizationserver.domain
+    build:
+      context: .
+      dockerfile: AuthorizationServer.Domain/Dockerfile
+
+  authorization.infrastructure:
+    image: authorization.infrastructure
+    build:
+      context: .
+      dockerfile: Authorization.Infrastructure/Dockerfile
+
+  authorization.application:
+    image: authorization.application
+    build:
+      context: .
+      dockerfile: Authorization.Application/Dockerfile
+
