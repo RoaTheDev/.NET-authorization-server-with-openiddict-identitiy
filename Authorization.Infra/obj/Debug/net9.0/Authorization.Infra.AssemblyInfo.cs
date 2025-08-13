@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Authorization.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee9658c31d49d79c3c36fbcd5d438840cb9a1242")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c85184a2cc658d07fd92cc2f10ebfffbb68cb841")]
 [assembly: System.Reflection.AssemblyProductAttribute("Authorization.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Authorization.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

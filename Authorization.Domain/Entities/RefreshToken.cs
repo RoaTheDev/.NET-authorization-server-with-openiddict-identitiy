@@ -12,8 +12,9 @@ public class RefreshToken : BaseEntity
     public DateTime RevokedAt { get; set; }
     public string? RevokedReason { get; set; }
     public string? RevokedBy { get; set; }
+    public Guid UserId { get; set; }
+    public virtual User User { get; set; } = null!;
     public bool IsExpired => DateTime.UtcNow >= ExpiryDate;
-
     public bool IsActive => !IsRevoked && !IsUsed && !IsExpired;
 
     public void Revoke(string reason, string? revokeBy = null)

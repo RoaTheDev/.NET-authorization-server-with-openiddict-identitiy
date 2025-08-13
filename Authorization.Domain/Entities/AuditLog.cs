@@ -7,6 +7,7 @@ public class AuditLog : BaseEntity
     public string Resource { get; set; } = string.Empty;
     public string? OldValue { get; set; }
     public string? NewValue { get; set; }
+    public string? IpAddress { get; set; }
     public string? UserAgent { get; set; }
     public DateTime TimeStamp { get; set; } = DateTime.UtcNow;
     public bool Success { get; set; }

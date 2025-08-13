@@ -14,6 +14,7 @@ public class User : IdentityUser<Guid>, IAggregateRoot
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? LastLoginAt { get; set; }
     public int LoginAttempts { get; set; }
+    public string? ProfilePictureUrl { get; set; }
     public DateTime? LockoutEndDateUtc { get; set; }
     public bool TwoFactorEnable { get; set; }
     public string? TwoFactorSecret { get; set; }
