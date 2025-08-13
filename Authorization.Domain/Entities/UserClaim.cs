@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Authorization.Domain.Entities;
 
+
 public class UserClaim : IdentityUserClaim<Guid>
 {
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

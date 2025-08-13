@@ -17,14 +17,23 @@ public class User : IdentityUser<Guid>, IAggregateRoot
     public DateTime? LockoutEndDateUtc { get; set; }
     public bool TwoFactorEnable { get; set; }
     public string? TwoFactorSecret { get; set; }
-    public int LockoutCount { get; set; } = 0;
+    public int LockoutCount { get; set; }
     public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
     public virtual ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
     public virtual ICollection<AuditLog> AuditLogs { get; set; } = new List<AuditLog>();
     public virtual ICollection<UserClaim> UserClaims { get; set; } = new List<UserClaim>();
 
-    public string FullName => new StringBuilder($"{FirstName} {MiddleName} {LastName}").ToString();
+    public string FullName
+    {
+        get
+        {
+            var parts = new[] { FirstName, MiddleName, LastName };
+            return string.Join(" ", parts.Where(p => !string.IsNullOrWhiteSpace(p)));
+        }
+    }
+
     public bool IsLockedOut => LockoutEndDateUtc.HasValue && LockoutEndDateUtc > DateTime.UtcNow;
+ 
 
     public void IncrementLoginAttempts()
     {
@@ -41,7 +50,10 @@ public class User : IdentityUser<Guid>, IAggregateRoot
             LoginAttempts = 0;
         }
     }
-
+    public void UpdateLastLogin()
+    {
+        LastLoginAt = DateTime.UtcNow;
+    }
     public void ResetLockout()
     {
         LockoutCount = 0;
