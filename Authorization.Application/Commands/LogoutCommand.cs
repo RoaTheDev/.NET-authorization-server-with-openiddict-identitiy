@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Authorization.Application.Commands;
 
-public class LogoutCommand : IRequest<Result<bool>>
+public record LogoutCommand : IRequest<Result<bool>>
 {
     public string? RefreshToken { get; init; }
     public string? IpAddress { get; init; }

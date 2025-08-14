@@ -16,6 +16,7 @@ public class AuthenticationService : IAuthenticationService
     private readonly IAuditService _auditService;
     private readonly ITokenService _tokenService;
     private readonly ICurrentUserService _currentUserService;
+    
 
     public AuthenticationService(UserManager<User> userManager, SignInManager<User> signInManager,
         IAuditService auditService, ITokenService tokenService, ICurrentUserService currentUserService)
@@ -156,4 +157,6 @@ public class AuthenticationService : IAuthenticationService
             "User logged out", request.IpAddress, userId);
         return Result<bool>.Success(true);
     }
+
+  
 }

@@ -1,3 +1,5 @@
+using System.Collections.Immutable;
+using Authorization.Application.Dto.Response;
 using Authorization.Domain.Entities;
 using Authorization.Infrastructure.Identity;
 
@@ -43,6 +45,28 @@ public static class UserMapper
             TwoFactorEnable = appUser.TwoFactorEnable,
             TwoFactorSecret = appUser.TwoFactorSecret,
             LockoutCount = appUser.LockoutCount
+        };
+    }
+
+    public static UserDto ToUserDto(this User user)
+    {
+        return new UserDto
+        {
+            Email = user.Email,
+            Id = user.Id,
+            FirstName = user.FirstName,
+            LastName = user.LastName,
+            MiddleName = user.MiddleName,
+            Roles = user.UserRoles
+                .Select(ur => ur.Role.Name)
+                .Distinct()
+                .ToImmutableList()!,
+
+            Permissions = user.UserRoles
+                .SelectMany(ur => ur.Role.RolePermissions)
+                .Select(rp => rp.Permission.Name)
+                .Distinct()
+                .ToImmutableList()
         };
     }
 }

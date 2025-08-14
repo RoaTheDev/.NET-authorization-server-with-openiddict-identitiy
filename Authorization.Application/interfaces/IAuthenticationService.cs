@@ -1,6 +1,8 @@
 using Authorization.Application.Commands;
 using Authorization.Application.Common;
+using Authorization.Application.Dto.Common;
 using Authorization.Application.Dto.Response;
+using Authorization.Application.Queries;
 
 namespace Authorization.Application.interfaces;
 
